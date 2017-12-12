@@ -1,0 +1,19 @@
+{
+  "name": "football-mania",
+  "version": "1.0.0",
+  "description": "A football video and gifs repository.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Varun Wahi",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "fs": "0.0.1-security",
+    "mongodb": "^2.2.29",
+    "request": "^2.81.0"
+  }
+}

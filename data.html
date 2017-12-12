@@ -1,0 +1,1055 @@
+<!doctype html>
+
+<html lang="en" ng-app="footyroom" ng-controller="AppCtrl"
+    xmlns:og="http://opengraphprotocol.org/schema/"
+    xmlns:fb="http://www.facebook.com/2008/fbml">
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQUHVlNbDRACVVBTAQcOVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1039.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+        <title>VIDEO Slovakia U21 3 - 0 Sweden U21 Highlights - FootyRoom</title>
+        <meta name="description" content="22nd June, 2017 - EURO U21 Grp. A, goals: Martin Chrien, Jaroslav Mihalik, Lubomir Satka">
+        <meta name="keywords" content="football, soccer, highlights, statistics, goals, premier league, la liga">
+        <meta name="viewport" content="width=1030">
+
+        <link rel="shortcut icon" href="/pics/favicons/favicon.ico">
+        <link rel="icon" type="image/png" href="/pics/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="apple-touch-icon" href="/pics/favicons/apple-touch-icon-152x152.png">
+
+        
+        <!-- Facebook meta -->
+        <meta property="fb:admins" content="100007389730865" />
+        <meta property="og:site_name" content="FootyRoom"/>
+        <meta property="og:image" content="http://images.footyroom.com/thumbs/a1269100f44f4d5be96e8a72c53c977b/slovakia-u21-sweden-u21" />
+
+        	<meta property="og:title" content="VIDEO Slovakia U21 3 - 0 Sweden U21"/>
+	<meta property="og:type" content="article"/>
+        
+        <!-- IE9 Support -->
+        <script type="text/javascript"> if (!window.console) console = {log: function() {}}; </script>
+
+        <script type="text/javascript">
+            WebFontConfig = {
+                google: { families: [ 'Source+Sans+Pro:300:latin' ] }
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })();
+        </script>
+
+        <!-- DFP - doubleclick for publishers -->
+        <script type='text/javascript'>
+            var googletag = googletag || {};
+            googletag.cmd = googletag.cmd || [];
+        </script>
+
+        <script>
+            googletag.cmd.push(function() {
+                googletag
+                    .defineSlot('/1873845/FR_WideBoard_Top', [[728, 90], [970, 250]], 'div-gpt-ad-1495531054340-0')
+                    .setTargeting('url', window.location.href)
+                    .addService(googletag.pubads());
+            });
+        </script>
+
+        	<script type="text/javascript">
+		googletag.cmd.push(function() {
+			googletag
+				.defineSlot('/1873845/FR_RightSide_of_Vid', [[300, 250], [300, 600], [336, 280]], 'div-gpt-ad-1341915070098-0')
+				.addService(googletag.pubads());
+		});
+	</script>
+        <!-- END DFP -->
+
+        <!-- Freestar -->
+        <script data-cfasync="false" type="text/javascript">
+            var freestar = freestar || {};
+            freestar.queue = freestar.queue || [];
+            freestar.config = freestar.config || {};
+
+            freestar.config.enabled_slots = [
+                "div-gpt-ad-300x250-Sidebar1"
+            ];
+
+            !function(a,b){var c=b.getElementsByTagName("script")[0],d=b.createElement("script"),e="https://pub.freestar.io/footyroom/";e+=window.location.search.indexOf("fsdebug")==-1?"pubfig.min.js?v=4":"pubfig.js?v=4",d.async=!0,d.src=e,c.parentNode.insertBefore(d,c)}(window,document);
+        </script>
+        <!-- End Freestar -->
+
+        <script type="text/javascript">
+            var SITEURL     = "http://footyroom.com";
+        </script>
+
+        <!-- Scripts -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        
+                    <script src="http://cdn.footyroom.com/js/dist/main.min.js?ver=223"></script>
+        
+                	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+	
+	<!--
+	~ Copyright (C) 2014-2015 Media.net Advertising FZ-LLC All Rights Reserved
+	-->
+	<script type="text/javascript">
+		window._mNHandle = window._mNHandle || {};
+		window._mNHandle.queue = window._mNHandle.queue || [];
+		medianet_versionId = "121199"; 
+		(function() {
+			var sct = document.createElement("script"),
+			sctHl = document.getElementsByTagName("script")[0],
+			isSSL = 'https:' == document.location.protocol;
+			sct.type = "text/javascript";
+			sct.src = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/dmedianet.js?cid=8CUZ8BR4V' + (isSSL ? '&https=1' : '')+'';
+			sct.async = "async";
+			sctHl.parentNode.insertBefore(sct, sctHl);
+		})();
+	</script>
+
+        <!-- Styles -->
+                    <link rel="stylesheet" href="http://cdn.footyroom.com/css/dist/main.min.css?ver=271" type="text/css" />
+                
+                
+        
+        <script>
+            DataStore.imagesHost = 'images.footyroom.com';
+            
+                            DataStore.isGuest = true;
+                    </script>
+
+        <script src="//platform.instagram.com/en_US/embeds.js"></script>
+
+        <script type="text/javascript" src="//vk.com/js/api/openapi.js?137"></script>
+        <script type="text/javascript">
+          VK.init({apiId: 5835114, onlyWidgets: true});
+        </script>
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=382400218501833&version=v2.1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        
+        <header class="site-header clearfix">
+            
+            <div class="main">
+                <div class="wrap">
+                    <a href="/" class="header-logo" title="FootyRoom Logo" style="background-size: 290px 33px" target="_self"></a>
+                    
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="/predictor">Predictor</a></li>
+                            <li><a href="http://footyroom.com/talk">Live Scores</a></li>
+                            <li><a href="http://footyroom.com/forum">Forum</a></li>
+                            <li><a href="http://footyroom.com/news-center">News</a></li>
+                            <li data-menu="extras"><a>Extras <span class="icn-tick-down"></span></a><div class="hover"><div class="extension"></div></div></li>
+                        </ul>
+                    </nav>
+
+                                            <div class="user-bar logged-out" ng-controller="LoginController">
+    <div class="user-main"><div class="login-text">Login or Signup</div></div>
+    <div class="dropdown-wrap">
+        <div class="dropdown">
+            <div class="error" ng-if="fbLoginError" ng-bind="fbLoginError" ng-cloak></div>
+            <div class="fb-login">
+                <div class="btn btn-fblogin btn-block" ng-click="fbLogin()">Login with Facebook</div>
+            </div>
+            <form name="login_bar_form" id="login_bar_form" class="login-form clearfix" action="/login" method="post" onsubmit="doLogin()">
+                <input type="text" placeholder="Username" name="username" id="login_username" />
+                <input type="password" placeholder="Password" name="password" id="login_password" />
+                <input type="hidden" id="login_origin" name="login_origin" value="" />
+                <input type="submit" id="login_btn" value="Log in" class="login-btn" />
+            </form>
+            <a href="http://footyroom.com/signup" class="new-account-link">Create new account</a>
+        </div>
+    </div>
+</div>                    
+                </div>
+            </div>
+            
+            <div class="bar">
+                <div class="wrap">
+                    <nav class="bar-nav">
+                        <ul>
+                            <li class="browse">Browse:</li>
+                            <li class="show-leagues" data-menu="all-leagues"><a>Leagues <span class="icn-tick-down"></span></a></li>
+                            <li class="show-popular" data-menu="popular-leagues-teams"><a>Popular <span class="icn-tick-down"></span></a></li>
+                            <li><div style="margin: 0 15px; position: relative; top: -7px; display: inline;" class="fb-like" data-height="20px" data-width="48px" data-layout="button" data-href="http://www.facebook.com/FootyRoom" data-action="like" data-show-faces="false" data-share="false"></div></li>
+                            <li class="fubotv-link displayno"><a href="http://www.fubo.tv/lp/footyroom/?irad=343747&irmp=394044"><img src="/pics/fubotv.png" style="width: 52px; height: auto; margin-top: -2px; vertical-align: middle;"></a></li>
+                        </ul>
+                    </nav>
+
+                    
+                    <div class="search-bar" ng-cloak>
+                        <input type="text" class="search-field" ng-focus="openSearch()" autocomplete="off" ng-model="searchQuery" ng-change="search()" ng-model-options="{debounce: 200}">
+                        <span class="icn-search"></span>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="mini">
+                <div class="wrap">
+                    <a href="/" class="icn-short-logo" title="FootyRoom Logo" style="font-size: 30px; vertical-align: middle;"></a>
+                    
+                    <nav class="mini-nav main-nav">
+                        <ul>
+                            <li><a href="http://footyroom.com/talk">Live Scores</a></li>
+                            <li><a href="http://footyroom.com/forum">Forum</a></li>
+                            <li class="show-leagues" data-menu="all-leagues"><a>Leagues <span class="icn-tick-down"></span></a></li>
+                        </ul>
+                    </nav>
+
+                    <a class="up-anchor icn-circle-up"></a>
+                </div>
+            </div>
+
+        </header>
+
+        <nav class="dropdown-nav wide extras clearfix" data-menu="extras">
+            <div class="wrap">
+                <ul>
+                    <li>
+                        <header><a href="http://footyroom.com/lemix">Le Mix</a></header>
+                        <summary>This is a collection of amazing videos around football</summary>
+                    </li>
+                    <li>
+                        <header><a href="http://footyroom.com/transfer-center">Transfers Center</a></header>
+                        <summary>Use this to follow player transfers. You can also check history from previous seasons (since 2009)</summary>
+                    </li>
+                    <li>
+                        <header><a href="http://footyroom.com/hall-of-fame">Hall of Fame</a></header>
+                        <summary>Profiles of greatest footballers of all time</summary>
+                    </li>
+                    <li>
+                        <header><a href="http://footyroom.com/legendary">Legendary Matches</a></header>
+                        <summary>Relive the moments of the greatest matches in history</summary>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="wrap bar-dropdown clearfix">
+            <nav class="dropdown-nav all-leagues show-leagues clearfix" data-menu="all-leagues">
+                <section class="main">
+                    <div class="column">
+                        <ul class="section b-b">
+                            <li class="header"><span class="icon country flg-gb-eng"></span> England</li>
+                            <li><a href="http://footyroom.com/competitions/5/premier-league">Premier League</a></li>
+                            <li><a href="http://footyroom.com/competitions/22/fa-cup">FA Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/23/league-cup">League Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/44/community-shield">Community Shield</a></li>
+                        </ul>
+
+                        <ul class="section b-b">
+                            <li class="header"><span class="icon country flg-it"></span> Italy</li>
+                            <li><a href="http://footyroom.com/competitions/9/serie-a">Serie A</a></li>
+                            <li><a href="http://footyroom.com/competitions/27/coppa-italia">Coppa Italia</a></li>
+                            <li><a href="http://footyroom.com/competitions/41/supercoppa-italiana">Supercoppa Italiana</a></li>
+                        </ul>
+
+                        <ul class="section">
+                            <li class="header"><span class="icon country flg-fr"></span> <span>France</span></li>
+                            <li><a href="http://footyroom.com/competitions/7/ligue-1">Ligue 1</a></li>
+                            <li><a href="http://footyroom.com/competitions/29/coupe-de-la-ligue">Coupe de la Ligue</a></li>
+                            <li><a href="http://footyroom.com/competitions/24/coupe-de-france">Coupe de France</a></li>
+                            <li><a href="http://footyroom.com/competitions/38/trophee-des-champions">French Super Cup</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <ul class="section b-b">
+                            <li class="header"><span class="icon country flg-es"></span> <span>Spain</span></li>
+                            <li><a href="http://footyroom.com/competitions/19/la-liga">La Liga</a></li>
+                            <li><a href="http://footyroom.com/competitions/25/copa-del-rey">Copa del Rey</a></li>
+                            <li><a href="http://footyroom.com/competitions/26/supercopa-de-espana">Supercopa de Espana</a></li>
+                        </ul>
+
+                        <ul class="section b-b">
+                            <li class="header"><span class="icon country flg-de"></span> <span>Germany</span></li>
+                            <li><a href="http://footyroom.com/competitions/8/bundesliga">Bundesliga</a></li>
+                            <li><a href="http://footyroom.com/competitions/39/dfb-pokal">DFB Pokal</a></li>
+                            <li><a href="http://footyroom.com/competitions/53/dfl-supercup">DFL-Supercup</a></li>
+                        </ul>
+
+                        <ul class="section">
+                            <li class="header"><span class="icon country flg-nl"></span> <span>Netherlands</span></li>
+                            <li><a href="http://footyroom.com/competitions/10/eredivisie">Eredivisie</a></li>
+                            <li><a href="http://footyroom.com/competitions/42/knvb-cup">KNVB Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/43/dutch-super-cup">Dutch Super Cup</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <ul class="section">
+                            <li class="header"><span class="icon country flg-cint"></span> <span>International</span></li>
+                            <li><a href="http://footyroom.com/competitions/20/international-friendlies">International Friendlies</a></li>
+                            <li><a href="http://footyroom.com/competitions/50/club-friendlies">Club Friendlies</a></li>
+                            <li><a href="http://footyroom.com/competitions/17/world-cup">World Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/2811/womens-world-cup">Women's World Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/47/world-cup-u-20">World Cup U-20</a></li>
+                            <li><a href="http://footyroom.com/competitions/46/africa-cup-of-nations">Africa Cup of Nations</a></li>
+                            <li><a href="http://footyroom.com/competitions/13/summer-olympics">Summer Olympics 2012</a></li>
+                            <li><a href="http://footyroom.com/competitions/18/club-world-cup">Club World Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/4/confederations-cup">Confederations Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/2556/aff-suzuki-cup">AFF Suzuki Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/2604/asian-cup">Asian Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/51/afc-champions-league">AFC Champions League</a></li>
+                            <li><a href="http://footyroom.com/competitions/49/concacaf-gold-cup">CONCACAF Gold Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/48/concacaf-champions-league">CONCACAF Champions League</a></li>
+                            <li><a href="http://footyroom.com/competitions/2810/copa-america">Copa America</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="column">
+                        <ul class="section">
+                            <li class="header"><span class="icon country flg-eu"></span> <span>Europe</span></li>
+                            <li><a href="http://footyroom.com/competitions/3/champions-league">UEFA Champions League</a></li>
+                            <li><a href="http://footyroom.com/competitions/15/europa-league">UEFA Europa League</a></li>
+                            <li><a href="http://footyroom.com/competitions/16/uefa-supercup">UEFA Super Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/6/euro">Euro</a></li>
+                            <li><a href="http://footyroom.com/competitions/45/euro-u-21">Euro U-21</a></li>
+                        </ul>
+                    </div>
+
+                    <section class="other column">
+                        <ul class="section">
+                            <li class="header">Other Leagues</li>
+                            <li><a href="http://footyroom.com/competitions/11/primeira-liga"><span class="icon country flg-pt"></span> Primeira Liga</a></li>
+                            <li><a href="http://footyroom.com/competitions/32/taca-de-portugal"><span class="icon country flg-pt"></span> Taca de Portugal</a></li>
+                            <hr class="all-leagues__hr">
+                            <li><a href="http://footyroom.com/competitions/14/super-lig"><span class="icon country flg-tr"></span> Süper Lig</a></li>
+                            <li><a href="http://footyroom.com/competitions/30/turkish-cup"><span class="icon country flg-tr"></span> Turkish Cup</a></li>
+                            <li><a href="http://footyroom.com/competitions/31/turkish-super-cup"><span class="icon country flg-tr"></span> Turkish Super Cup</a></li>
+                            <hr class="all-leagues__hr">
+                            <li><a href="http://footyroom.com/competitions/12/russian-premier-league"><span class="icon country flg-ru"></span> Russian Premier League</a></li>
+                            <hr class="all-leagues__hr">
+                            <li><a href="http://footyroom.com/competitions/21/mls"><span class="icon country flg-us"></span> Major League Soccer</a></li>
+                        </ul>
+                    </section>
+                </section>
+            </nav>
+
+            <nav class="dropdown-nav popular clearfix" data-menu="popular-leagues-teams">
+                <ul>
+                    <li class="popular-leagues b-b clearfix">
+                        <ul>
+                            <li class="popular__header"><span>Leagues:</span></li>
+                            <li class="popular__item"><a href="http://footyroom.com/competitions/5/premier-league"><span class="icon country flg-gb-eng"></span> <span>Premier League</span></a></li>
+                            <li class="popular__item"><a href="http://footyroom.com/competitions/19/la-liga"><span class="icon country flg-es"></span> <span>La Liga</span></a></li>
+                            <li class="popular__item"><a href="http://footyroom.com/competitions/9/serie-a"><span class="icon country flg-it"></span> <span>Serie A</span></a></li>
+                            <li class="popular__item"><a href="http://footyroom.com/competitions/8/bundesliga"><span class="icon country flg-de"></span> <span>Bundesliga</span></a></li>
+                            <li class="popular__item"><a href="http://footyroom.com/competitions/7/ligue-1"><span class="icon country flg-fr"></span> <span>Ligue 1</span></a></li>
+                            <li class="popular__item"><a href="http://footyroom.com/competitions/3/champions-league"><span class="icon country flg-uefa-cl"></span> <span>Champions League</span></a></li>
+                            <li class="popular__item"><a href="http://footyroom.com/competitions/15/europa-league"><span class="icon country flg-uefa-el"></span> <span>Europa League</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="popular-teams">
+                        <ul>
+                            <li class="popular__header"><span>Teams:</span></li>
+                            <li class="popular__item"><a href="/search?q=Manchester United"><span class="icon popular-team icon-popular-team-mu"></span> <span>Manchester United</span></a></li>
+                            <li class="popular__item"><a href="/search?q=Chelsea"><span class="icon popular-team icon-popular-team-che"></span> <span>Chelsea</span></a></li>
+                            <li class="popular__item"><a href="/search?q=Barcelona"><span class="icon popular-team icon-popular-team-fcb"></span> <span>Barcelona</span></a></li>
+                            <li class="popular__item"><a href="/search?q=Real Madrid"><span class="icon popular-team icon-popular-team-rma"></span> <span>Real Madrid</span></a></li>
+                            <li class="popular__item"><a href="/search?q=Arsenal"><span class="icon popular-team icon-popular-team-ars"></span> <span>Arsenal</span></a></li>
+                            <li class="popular__item"><a href="/search?q=Liverpool"><span class="icon popular-team icon-popular-team-liv"></span> <span>Liverpool</span></a></li>
+                            <li class="popular__item"><a href="/search?q=Juventus"><span class="icon popular-team icon-popular-team-juv"></span> <span>Juventus</span></a></li>
+                            <li class="popular__item"><a href="/search?q=Bayern Munich"><span class="icon popular-team icon-popular-team-bayern"></span> <span>Bayern Munich</span></a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="wrap">
+            <div class="search-dropdown clearfix" fr-click-out="closeSearch" fr-click-out-filter=".search-bar" ng-if="showSearchResult" ng-cloak>
+                <div class="matches-search-result col-xs-6">
+                    <header class="row">Matches</header>
+                    <div>
+                        <a ng-repeat="matchPost in searchResult.matches" ng-href="http://footyroom.com/matches/{{matchPost.matchId}}/-/review" class="match-search-item">
+                            <div class="title" ng-bind="matchPost.title"></div>
+                            <div class="date">{{matchPost.date | date : 'd MMM y'}}</div>
+                            <div class="league" ng-bind="matchPost.competitionName"></div>
+                        </a>
+                    </div>
+
+                    <div ng-if="!searchResult.matches.length">Nope, nothing found.</div>
+
+                    <div class="search-more text-center" ng-if="searchResult.matches.length === 10">
+                        <a ng-href="http://footyroom.com/search?q={{ searchQuery }}" class="btn btn-default">See more results</a>
+                    </div>
+                </div>
+                
+                <div class="forum-search-result col-xs-6">
+                    <header class="row">Forum</header>
+                    <div>
+                        <a ng-repeat="post in searchResult.forums" ng-href="http://footyroom.com/forum/discussions/{{ post.slug }}-{{ post.id }}" class="forum-search-item clearfix">
+                            <div class="title col-xs-10" ng-bind="post.title"></div>
+                            <div class="comments-count col-xs-2">{{ post.commentCount }} <span class="icn-comments"></span></div>
+                        </a>
+                    </div>
+
+                    <div ng-if="!searchResult.forums.length">Didn't find anything.</div>
+
+                    <div class="search-more text-center" ng-if="searchResult.forums.length === 10">
+                        <a ng-href="http://footyroom.com/forum?q={{ searchQuery }}" class="btn btn-default">See more results</a>
+                    </div>
+                </div>
+            </div>
+
+                            <div class="wideBox clearfix" style="text-align: center;">
+                    <!-- /1873845/FR_WideBoard_Top -->
+                    <div id='div-gpt-ad-1495531054340-0'>
+                        <script>
+                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1495531054340-0'); });
+                        </script>
+                    </div>
+                </div>
+            
+            	<script type="text/javascript">
+		$.post('/views/match:79935688');
+	</script>
+
+	<div ng-controller="MatchCtrl as maCtrl">
+		<div id="mainBox" class="mp" ng-class="{rounded: isShowLineup}">
+			<div class="mph clearfix">
+				<div class="mph-left">
+					
+					<div class="mph-scoreline-wrap">
+						<img class="mph-teamlogo lfloat" src="http://images.footyroom.com/badges/773" />
+						<img class="mph-teamlogo rfloat" src="http://images.footyroom.com/badges/783" />
+
+						<div class="mph-status" ng-switch on="maCtrl.match.statusType" ng-cloak>
+							<span ng-switch-when="inprogress">
+								<span ng-if="maCtrl.match.timerStart" ng-bind="maCtrl.match.minute"></span>
+								<span ng-if="!maCtrl.match.timerStart" ng-bind="maCtrl.match.status"></span>
+							</span>
+
+							<span ng-switch-when="finished" ng-bind="maCtrl.match.status"></span>
+
+							<span ng-switch-when="cancelled">Canceled</span>
+							<span ng-switch-when="interrupted">Abandoned</span>
+						</div>
+
+						<div class="mph-scoreline">
+							<div class="mph-team-col">
+								<div class="mph-teamname rfloat">
+									<div class="mph-teamname-text">
+										Slovakia U21 <span ng-if="maCtrl.match.homeAggrWin" ng-cloak>*</span>
+									</div>
+								</div>
+							</div>
+							<div class="mph-score-col">
+								<div class="mph-score"><span ng-bind="maCtrl.match.homeScore"></span> : <span ng-bind="maCtrl.match.awayScore"></span></div>
+							</div>
+							<div class="mph-team-col">
+								<div class="mph-teamname lfloat away">
+									<div class="mph-teamname-text">
+										<span ng-if="maCtrl.match.awayAggrWin" ng-cloak>*</span> Sweden U21
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="mph-aggregate" ng-if="maCtrl.match.homeScoreAggr != null && maCtrl.match.awayScoreAggr != null" ng-cloak>
+							<div>{{ maCtrl.match.homeAggrWin ? maCtrl.match.homeTeam.name : maCtrl.match.awayTeam.name }} wins on aggregate</div>
+							<div>{{ maCtrl.match.homeScoreAggr }} : {{ maCtrl.match.awayScoreAggr }}</div>
+						</div>
+					</div>
+
+					<div class="_2col-left">
+						<div class="mph-info" ng-cloak>
+							<ul>
+								<li>Game Played on <strong>22nd June, 2017</strong></li>
+								<li>Kick Off at <strong>18:06 (GMT)</strong></li>
+
+																<li ng-if="maCtrl.match.homeScoreHT && maCtrl.match.awayScoreHT">
+									<em>Half Time</em> finished with scoreline <em>{{ maCtrl.match.homeScoreHT }}:{{ maCtrl.match.awayScoreHT }}</em>
+								</li>
+
+																<div ng-if="maCtrl.match.homeScoreFT && maCtrl.match.awayScoreFT">
+																		<li ng-if="maCtrl.match.statusType === 'finished' && !(maCtrl.match.homeScoreET && maCtrl.match.awayScoreET) && !(maCtrl.match.homeScorePEN && maCtrl.match.awayScorePEN)">
+										<em>Game ended</em> after <em>Full Time</em> with scoreline <em>{{ maCtrl.match.homeScoreFT }}:{{ maCtrl.match.awayScoreFT }}</em>
+									</li>									
+									<li ng-if="(maCtrl.match.homeScoreET && maCtrl.match.awayScoreET) || (maCtrl.match.homeScorePEN && maCtrl.match.awayScorePEN)">
+										<em>Full Time</em> finished with scoreline <em>{{ maCtrl.match.homeScoreFT }}:{{ maCtrl.match.awayScoreFT }}</em>
+									</li>
+								</div>
+
+																<div ng-if="maCtrl.match.homeScoreET && maCtrl.match.awayScoreET">
+																		<li ng-if="maCtrl.match.statusType === 'finished' && (!maCtrl.match.homeScorePEN || !maCtrl.match.awayScorePEN)">
+										<em>Game ended</em> after <em>Extra Time</em> with scoreline <em>{{ +maCtrl.match.homeScoreET + +maCtrl.match.homeScoreFT }}:{{ +maCtrl.match.awayScoreET + +maCtrl.match.awayScoreFT }}</em>
+									</li>
+									<li ng-if="maCtrl.match.homeScorePEN && maCtrl.match.awayScorePEN">
+										<em>Extra Time</em> finished with scoreline <em>{{ +maCtrl.match.homeScoreET + +maCtrl.match.homeScoreFT }}:{{ +maCtrl.match.awayScoreET + +maCtrl.match.awayScoreFT }}</em>
+									</li>
+								</div>
+
+																<li ng-if="maCtrl.match.statusType === 'finished' && maCtrl.match.homeScorePEN && maCtrl.match.awayScorePEN"><em>Game ended</em> after <em>Penalties</em> with scoreline <em>{{ maCtrl.match.homeScorePEN }}:{{ maCtrl.match.awayScorePEN }}</em></li>
+
+																<li ng-if="maCtrl.match.statusType === 'finished' && (!maCtrl.match.homeScoreFT || !maCtrl.match.awayScoreFT)">
+									Game ended with scoreline <em>{{ maCtrl.match.homeScore }}:{{ maCtrl.match.awayScore }}</em>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="mph-social-wrap" ng-cloak>
+						<div class="mph-social">
+							<div class="mph-fans">
+								There are 2 fans of <a>Slovakia U21</a> and 7 fans of <a>Sweden U21</a> on FootyRoom
+							</div>
+
+							<div class="mph-share clearfix">
+								<div id="fb-share-vid">
+									<div class="fb-share-button"
+									data-image="http://images.footyroom.com/thumbs/a1269100f44f4d5be96e8a72c53c977b/slovakia-u21-sweden-u21"
+									data-layout="button_count"></div>
+								</div>
+								<div id="tweet-vid">
+									<a href="https://twitter.com/share" class="twitter-share-button" data-via="footyroom">Tweet</a>
+								</div>
+								<div style="float: left;"><div id="vk_like"></div></div>
+								<script type="text/javascript">VK.Widgets.Like("vk_like", {type: "mini", height: 20});</script>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+				
+				<div class="mph-right" ng-cloak>
+					<ul class="mph-facts">
+						<li ng-if="maCtrl.match.spectators && maCtrl.match.venueName">Attendance of <em>{{ maCtrl.match.spectators }}</em> fans at the <a>{{ maCtrl.match.venueName }}</a></li>
+						<li ng-if="!maCtrl.match.spectators && maCtrl.match.venueName">Game is played at the <a>{{ maCtrl.match.venueName }}</a></li>
+						<li ng-if="maCtrl.match.spectators && !maCtrl.match.venueName">This match had attendance of <em>{{ maCtrl.match.spectators }}</em> fans</a></li>
+						
+						<li ng-if="maCtrl.match.refereeName">The referee for this match is <a>{{ maCtrl.match.refereeName }}</a></li>
+						
+						<li>
+							This is a match in<br/>
+															<a>International</a> - <a>EURO U21 Grp. A</a><br/>
+							
+
+															<span class="round">
+									Match Day 3, 
+								</span>
+													
+															<span>Season 2017</span>
+													</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="video-section clearfix" ng-controller="MediaCtrl as ctrl" ng-cloak>
+				<div class="video-section-wrap clearfix">
+					<script src="/js/ads.js">
+						if (!noAdBlock) {
+							$('#adblock-warning').show();
+						}
+					</script>
+					
+					<div id="adblock-warning" style="width: 575px; margin: 0 auto 30px auto; background-color: #fa0; text-align: center; padding: 20px; border-radius: 5px;" class="displayno">
+						You might not be able to watch this video with AdBlock enabled.
+					</div>
+
+					<div class="quick-incidents qi home">
+						<ul class="incidents">
+							<li class="team"><i class="icon-r-arrow"></i>{{ maCtrl.match.homeTeam.name }}</li>
+							
+							<li class="type" ng-if="maCtrl.homeGoals.length">Goals</li>
+							<li ng-repeat="event in maCtrl.homeGoals"><i class="icon-{{ event.code.id }}"></i> {{ maCtrl.lastname(event.player.name) }} ({{ event.elapsed }}&#x27;)</li>
+							
+							<li class="type" ng-if="maCtrl.homeCards.length">Cards</li>
+							<li ng-repeat="event in maCtrl.homeCards"><i class="icon-{{ event.code.id }}"></i> {{ maCtrl.lastname(event.player.name) }} ({{ event.elapsed }}&#x27;)</li>
+						</ul>
+					</div>
+					
+					<div class="videos-wrap">
+						<div id="videos" class="clearfix">
+							<div id="video"></div>
+						</div>
+
+						<div class="no-content-message" ng-if="ctrl.media.length === 0">
+							We could not find anything for this match. Please accept our apology.
+							If you are a producer of <b>original</b> content and would like to have it featured here or have a suggestion where to find some, please write to us.
+						</div>
+
+						<div class="content-disclaimer" ng-if="ctrl.selectedMedia">
+							<b>Disclaimer:</b> This content is provided and hosted by 
+							
+							<span ng-if="ctrl.selectedMedia.provider">
+								<a ng-href="{{ ctrl.selectedMedia.source }}" target="_blank" rel="nofollow">{{ ctrl.selectedMedia.provider }}</a>.
+							</span>
+
+							<span ng-if="!ctrl.selectedMedia.provider">
+								a third party server.
+							</span>
+
+							FootyRoom helps you discover publicly available material throughout Internet and as a search engine does not host
+							or upload this material and is not responsible for the content.
+						</div>
+					</div>
+					
+					<div class="quick-incidents qi away">
+						<ul class="incidents">
+							<li class="team right">{{ maCtrl.match.awayTeam.name }}<i class="icon-l-arrow"></i></li>
+							
+							<li class="type" ng-if="maCtrl.awayGoals.length">Goals</li>
+							<li ng-repeat="event in maCtrl.awayGoals">{{ maCtrl.lastname(event.player.name) }} ({{ event.elapsed }}&#x27;) <i class="icon-{{ event.code.id }}"></i></li>
+							
+							<li class="type" ng-if="maCtrl.awayCards.length">Cards</li>
+							<li ng-repeat="event in maCtrl.awayCards">{{ maCtrl.lastname(event.player.name) }} ({{ event.elapsed }}&#x27;) <i class="icon-{{ event.code.id }}"></i></li>
+						</ul>
+					</div>
+
+					<div class="vsh-open icn right help"><a></a></div>
+
+					<div class="video-section-help">
+						<div class="vsh-close"><a>Close</a></div>
+						<div class="vsh-legend qi">
+							<ul>
+								<li><i class="icon-yellow-card"></i> Yellow card</li>
+								<li><i class="icon-red-card"></i> Red card</li>
+								<li><i class="icon-second-yellow"></i> Second yellow resulting in red</li>
+								<li><i class="icon-goal"></i> Goal</li>
+								<li><i class="icon-penalty"></i> Goal from penalty</li>
+								<li><i class="icon-penalty-miss"></i> Missed penalty</li>
+								<li><i class="icon-own-goal"></i> Own goal</li>
+								<li><i class="icon-assist"></i> Assist</li>
+							</ul>
+						</div>
+						<div class="vsh-line1">
+							<svg width="165" height="38" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<filter id="svg_1_blur">
+										<feGaussianBlur stdDeviation="0.1" in="SourceGraphic"/>
+									</filter>
+								</defs>
+								<g>
+									<path filter="url(#svg_1_blur)" fill="none" stroke="#aaa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M1.5,7.615c44-15,59.07,0.41,81,16c45,32,81-9,81-9"/>
+								</g>
+							</svg>
+						</div>
+						<div class="vsh-text1">Incident icons are explained here</div>
+						<div class="vsh-line2">
+							<svg width="266" height="87" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<filter id="svg_1_blur">
+										<feGaussianBlur stdDeviation="0.1" in="SourceGraphic"/>
+									</filter>
+								</defs>
+								<g>
+									<path filter="url(#svg_1_blur)" fill="none" stroke="#aaa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M3,84c13-54,56-53,137.25-45.95C260.88,48.52,263,3,263,3"/>
+								</g>
+							</svg>	
+						</div>
+						<div class="vsh-text2">Other content from this match<br/>is available here</div>
+					</div>
+				</div>
+
+				<div class="vid-control-wrap" ng-if="ctrl.media.length > 0">
+					<div class="vid-control clearfix">
+						<div class="media-item" ng-repeat="item in ctrl.media" ng-click="ctrl.showMedia(item)" ng-class="{selected: ctrl.selectedMedia === item}">
+							<div class="media-image" ng-style="{background: 'url(' + item.thumbUrl + ') center center / cover no-repeat'}"></div>
+							<div class="media-text">
+								<div class="media-text-overlay"></div>
+								<div ng-bind="item.title" class="media-title"></div>
+								<div class="media-src" ng-if="item.provider">via {{ item.provider }}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script type="text/javascript">
+					DataStore['competitionId'] = 45;
+					DataStore['daysSincePosted'] = 8;
+					DataStore.media = [{"source":"http:\/\/www.goalsarena.org\/en\/video\/under-21-u21\/22-06-2017-slovakia-u21-sweden-u21-euro-u-21.html","attachment":"<script src=\"\/\/cdn.playwire.com\/bolt\/js\/zeus\/embed.js\" data-config=\"\/\/config.playwire.com\/14907\/videos\/v2\/5418013\/zeus.json\" data-width=\"100%\" data-height=\"100%\"  type=\"text\/javascript\" charset=\"utf-8\"><\/script>","payloadType":"html","unverified":true,"title":"Slovakia U21 3-0 Sweden U21 (EURO U-21) Highlights","provider":"Playwire","thumbUrl":"https:\/\/cdn.video.playwire.com\/16240\/videos\/5417981\/thumb_large_poster_0000.jpg","payload":"<div class=\"embed-card\"><div class=\"embed-card-media\"><script src=\"\/\/cdn.playwire.com\/bolt\/js\/zeus\/embed.js\" data-config=\"\/\/config.playwire.com\/14907\/videos\/v2\/5418013\/zeus.json\" data-width=\"100%\" data-height=\"100%\"  type=\"text\/javascript\" charset=\"utf-8\"><\/script><\/div><div class=\"embed-card-body\"><div class=\"embed-card-title\">Slovakia U21 3-0 Sweden U21 (EURO U-21) Highlights<\/div><div class=\"embed-card-credit\"><img class=\"embed-card-favicon\" src=\"http:\/\/www.goalsarena.org\/favicon.ico\"><b>goalsarena.org<\/b> via <b>Playwire<\/b><\/div><\/div><\/div>"},{"source":"https:\/\/twitter.com\/UEFAUnder21\/status\/877986832927019009","payloadType":"html","unverified":false,"title":"UEFA U21 EURO on Twitter - \ud83d\udcf8\u00a0The moment Chrien gave Slovakia the lead against Sweden. \u26bd\ufe0f#U21EURO #SVKSWE \ud83c\uddf8\ud83c\uddf0\ud83c\udd9a\ud83c\uddf8\ud83c\uddea pic.twitter.com\/jyVo37Q7Se&mdash; UEFA U21 EURO (@UEFAUnder21) June 22, 2017","provider":"Twitter","thumbUrl":"https:\/\/pbs.twimg.com\/media\/DC87pKoXYAMqHrA.jpg:large","payload":"<blockquote class=\"twitter-tweet\" align=\"center\"><p lang=\"en\" dir=\"ltr\">\ud83d\udcf8\u00a0The moment Chrien gave Slovakia the lead against Sweden. \u26bd\ufe0f<a href=\"https:\/\/twitter.com\/hashtag\/U21EURO?src=hash\">#U21EURO<\/a> <a href=\"https:\/\/twitter.com\/hashtag\/SVKSWE?src=hash\">#SVKSWE<\/a> \ud83c\uddf8\ud83c\uddf0\ud83c\udd9a\ud83c\uddf8\ud83c\uddea <a href=\"https:\/\/t.co\/jyVo37Q7Se\">pic.twitter.com\/jyVo37Q7Se<\/a><\/p>&mdash; UEFA U21 EURO (@UEFAUnder21) <a href=\"https:\/\/twitter.com\/UEFAUnder21\/status\/877986832927019009\">June 22, 2017<\/a><\/blockquote>\n<script async src=\"\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"><\/script>"},{"source":"https:\/\/twitter.com\/BBCSport\/status\/877966922523975681","payloadType":"html","unverified":false,"title":"BBC Sport on Twitter - Slovakia U21 have another.They&#39;re not messing around. It looks as though England will need a win.Live coverage: https:\/\/t.co\/DWkOwYA0xj pic.twitter.com\/so3owqu9WP&mdash; BBC Sport (@BBCSport) June 22, 2017","provider":"Twitter","thumbUrl":"https:\/\/pbs.twimg.com\/media\/DC8qPj3XYAAHN8E.jpg:large","payload":"<blockquote class=\"twitter-tweet\" align=\"center\"><p lang=\"en\" dir=\"ltr\">Slovakia U21 have another.<br><br>They&#39;re not messing around. It looks as though England will need a win.<br><br>Live coverage: <a href=\"https:\/\/t.co\/DWkOwYA0xj\">https:\/\/t.co\/DWkOwYA0xj<\/a> <a href=\"https:\/\/t.co\/so3owqu9WP\">pic.twitter.com\/so3owqu9WP<\/a><\/p>&mdash; BBC Sport (@BBCSport) <a href=\"https:\/\/twitter.com\/BBCSport\/status\/877966922523975681\">June 22, 2017<\/a><\/blockquote>\n<script async src=\"\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"><\/script>"},{"source":"https:\/\/twitter.com\/BBCSport\/status\/877984636563075072","payloadType":"html","unverified":false,"title":"BBC Sport on Twitter - Slovakia U21 know it could come down to goal difference...They&#39;ve hit a third against Sweden!#Euro2017 live: https:\/\/t.co\/DWkOwYRBVT pic.twitter.com\/XW2GFTiN4d&mdash; BBC Sport (@BBCSport) June 22, 2017","provider":"Twitter","thumbUrl":"https:\/\/pbs.twimg.com\/media\/DC86WQRXsAE9elt.jpg:large","payload":"<blockquote class=\"twitter-tweet\" align=\"center\"><p lang=\"en\" dir=\"ltr\">Slovakia U21 know it could come down to goal difference...<br><br>They&#39;ve hit a third against Sweden!<a href=\"https:\/\/twitter.com\/hashtag\/Euro2017?src=hash\">#Euro2017<\/a> live: <a href=\"https:\/\/t.co\/DWkOwYRBVT\">https:\/\/t.co\/DWkOwYRBVT<\/a> <a href=\"https:\/\/t.co\/XW2GFTiN4d\">pic.twitter.com\/XW2GFTiN4d<\/a><\/p>&mdash; BBC Sport (@BBCSport) <a href=\"https:\/\/twitter.com\/BBCSport\/status\/877984636563075072\">June 22, 2017<\/a><\/blockquote>\n<script async src=\"\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"><\/script>"}];
+				</script>
+
+				<script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+				<script type="text/javascript" src="/js/dist/roller/build.min.js?9"></script>
+			</div>
+
+			<script>
+				DataStore.match = {"id":79935688,"homeTeam":{"id":773,"name":"Slovakia U21"},"awayTeam":{"id":783,"name":"Sweden U21"},"homeScore":"3","awayScore":"0","homeScoreHT":"2","awayScoreHT":"0","homeScoreFT":"3","awayScoreFT":"0","homeScoreET":null,"awayScoreET":null,"homeScorePEN":null,"awayScorePEN":null,"homeScoreAggr":null,"awayScoreAggr":null,"homeAggrWin":null,"awayAggrWin":null,"datetime":{"date":"2017-06-22 18:45:00.000000","timezone_type":1,"timezone":"+00:00"},"timerStart":null,"status":"FT","statusType":"finished","spectators":11203,"venueName":"Arena Lublin","refereeName":"Jesus Gil","round":"3","region":"International","stage":"EURO U21 Grp. A","season":"2017","stageTree":"45,3339,3340","stageId":3340,"incidents":[{"side":"home","elapsed":"5","sortorder":6,"updated":{"sec":1498157566,"usec":169000},"_id":{"$id":"594c11fea05196419a2bd3d0"},"player":{"enetID":412362,"name":"Martin Chrien"},"code":{"id":"g","category":"g"}},{"side":"home","elapsed":"5","sortorder":6,"updated":{"sec":1498157566,"usec":178000},"_id":{"$id":"594c11fea05196419a2bd3d1"},"player":{"enetID":273419,"name":"Robert Mazan"},"code":{"id":"a","category":"a"}},{"side":"home","elapsed":"22","sortorder":2,"updated":{"sec":1498158525,"usec":470000},"_id":{"$id":"594c15bda05196419a2bd41c"},"player":{"enetID":298946,"name":"Jaroslav Mihalik"},"code":{"id":"g","category":"g"}},{"side":"home","elapsed":"22","sortorder":2,"updated":{"sec":1498158525,"usec":477000},"_id":{"$id":"594c15bda05196419a2bd41d"},"player":{"enetID":432828,"name":"Adam Zrelak"},"code":{"id":"a","category":"a"}},{"code":{"id":"so","category":"s"},"player":{"enetID":436089,"name":"Pawel Cibicki"},"side":"away","elapsed":"46","sortorder":1,"updated":{"sec":1498160925,"usec":637000}},{"code":{"id":"si","category":"s"},"player":{"enetID":438825,"name":"Niclas Eliasson"},"side":"away","elapsed":"46","sortorder":2,"updated":{"sec":1498160925,"usec":656000}},{"side":"away","elapsed":"46","sortorder":3,"updated":{"sec":1498160925,"usec":680000},"_id":{"$id":"594c1f1da05196419a2bd461"},"player":{"enetID":315058,"name":"Melker Hallberg"},"code":{"id":"so","category":"s"}},{"side":"away","elapsed":"46","sortorder":4,"updated":{"sec":1498160925,"usec":686000},"_id":{"$id":"594c1f1da05196419a2bd462"},"player":{"enetID":261597,"name":"Muamer Tankovic"},"code":{"id":"si","category":"s"}},{"code":{"id":"y","category":"c"},"player":{"enetID":528409,"name":"Kerim Mrabti"},"side":"away","elapsed":"56","sortorder":2,"updated":{"sec":1498161585,"usec":738000}},{"code":{"id":"so","category":"s"},"player":{"enetID":432828,"name":"Adam Zrelak"},"side":"home","elapsed":"69","sortorder":2,"updated":{"sec":1498162965,"usec":767000}},{"code":{"id":"si","category":"s"},"player":{"enetID":728422,"name":"Pavol Safranko"},"side":"home","elapsed":"69","sortorder":3,"updated":{"sec":1498162965,"usec":792000}},{"side":"away","elapsed":"72","sortorder":0,"updated":{"sec":1498162485,"usec":791000},"_id":{"$id":"594c2535a05196419a2bd4bc"},"player":{"enetID":578187,"name":"Kristoffer Olsson"},"code":{"id":"so","category":"s"}},{"side":"away","elapsed":"72","sortorder":1,"updated":{"sec":1498162485,"usec":800000},"_id":{"$id":"594c2535a05196419a2bd4bd"},"player":{"enetID":748381,"name":"Joel Asoro"},"code":{"id":"si","category":"s"}},{"side":"home","elapsed":"73","sortorder":2,"updated":{"sec":1498162545,"usec":749000},"_id":{"$id":"594c2571a05196419a2bd4bf"},"player":{"enetID":541825,"name":"Lubomir Satka"},"code":{"id":"g","category":"g"}},{"side":"home","elapsed":"73","sortorder":2,"updated":{"sec":1498162605,"usec":740000},"_id":{"$id":"594c25ada05196419a2bd4c0"},"player":{"enetID":464981,"name":"Matus Bero"},"code":{"id":"a","category":"a"}},{"code":{"id":"so","category":"s"},"player":{"enetID":464981,"name":"Matus Bero"},"side":"home","elapsed":"85","sortorder":3,"updated":{"sec":1498163505,"usec":774000}},{"code":{"id":"si","category":"s"},"player":{"enetID":629112,"name":"Laszlo Benes"},"side":"home","elapsed":"85","sortorder":4,"updated":{"sec":1498163505,"usec":795000}},{"code":{"id":"y","category":"c"},"player":{"enetID":406506,"name":"Linus Wahlqvist"},"side":"away","elapsed":"86","sortorder":3,"updated":{"sec":1498163385,"usec":779000}},{"side":"home","elapsed":"90","sortorder":2,"updated":{"sec":1498163565,"usec":766000},"_id":{"$id":"594c296da05196419a2bd4ce"},"player":{"enetID":298946,"name":"Jaroslav Mihalik"},"code":{"id":"so","category":"s"}},{"side":"home","elapsed":"90","sortorder":3,"updated":{"sec":1498163565,"usec":777000},"_id":{"$id":"594c296da05196419a2bd4cf"},"player":{"enetID":518628,"name":"Lukas Haraslin"},"code":{"id":"si","category":"s"}}],"lineup":[{"side":"away","type":"Coach","updated":{"sec":1496212785,"usec":260000},"_id":{"$id":"592e6531d56cc35f661212ae"},"participant":{"enetId":646618,"name":"Haakan Ericson"}},{"side":"home","type":"Coach","updated":{"sec":1496744565,"usec":736000},"_id":{"$id":"59368275d56cc35f6612572f"},"participant":{"enetId":213927,"name":"Pavel Hapal"}},{"side":"home","type":"Starter","participant":{"enetId":523901,"name":"Adrian Chovan"},"updated":{"sec":1498021065,"usec":792000},"positionName":"GK","enetPos":11,"number":1},{"side":"home","type":"Starter","participant":{"enetId":541825,"name":"Lubomir Satka"},"updated":{"sec":1498154505,"usec":697000},"positionName":"RB","enetPos":32,"number":13},{"side":"home","type":"Starter","participant":{"enetId":309328,"name":"Milan Skriniar"},"updated":{"sec":1498021065,"usec":817000},"positionName":"CB","enetPos":34,"number":3},{"side":"home","type":"Starter","participant":{"enetId":432217,"name":"Branislav Ninaj"},"updated":{"sec":1498021065,"usec":826000},"positionName":"CB","enetPos":36,"number":2},{"side":"home","type":"Starter","participant":{"enetId":273419,"name":"Robert Mazan"},"updated":{"sec":1498021065,"usec":832000},"positionName":"LB","enetPos":38,"number":14},{"side":"home","type":"Starter","participant":{"enetId":308517,"name":"Stanislav Lobotka"},"updated":{"sec":1498021065,"usec":838000},"positionName":"DM","enetPos":65,"number":6},{"side":"home","type":"Starter","participant":{"enetId":484858,"name":"Albert Rusnak"},"updated":{"sec":1498021065,"usec":846000},"positionName":"RM","enetPos":82,"number":10},{"side":"home","type":"Starter","participant":{"enetId":464981,"name":"Matus Bero"},"updated":{"sec":1498021065,"usec":853000},"positionName":"CM","enetPos":84,"number":21},{"side":"home","type":"Starter","participant":{"enetId":412362,"name":"Martin Chrien"},"updated":{"sec":1498021065,"usec":859000},"positionName":"CM","enetPos":86,"number":8},{"side":"home","type":"Starter","participant":{"enetId":298946,"name":"Jaroslav Mihalik"},"updated":{"sec":1498021065,"usec":868000},"positionName":"LM","enetPos":88,"number":7},{"side":"home","type":"Starter","participant":{"enetId":432828,"name":"Adam Zrelak"},"updated":{"sec":1498021065,"usec":874000},"positionName":"ST","enetPos":115,"number":15},{"side":"away","type":"Starter","updated":{"sec":1498028565,"usec":247000},"positionName":"GK","enetPos":11,"number":12,"_id":{"$id":"594a1a15dd2c63267a597772"},"participant":{"enetId":361068,"name":"Anton Cajtoft"}},{"side":"away","type":"Starter","updated":{"sec":1498028565,"usec":256000},"positionName":"RB","enetPos":32,"number":2,"_id":{"$id":"594a1a15dd2c63267a597773"},"participant":{"enetId":406506,"name":"Linus Wahlqvist"}},{"side":"away","type":"Starter","updated":{"sec":1498028565,"usec":260000},"positionName":"CB","enetPos":34,"number":3,"_id":{"$id":"594a1a15dd2c63267a597774"},"participant":{"enetId":281859,"name":"Jacob Une Larsson"}},{"side":"away","type":"Starter","participant":{"enetId":614193,"name":"Franz Brorsson"},"updated":{"sec":1498154505,"usec":714000},"positionName":"CB","enetPos":36,"number":15},{"side":"away","type":"Starter","participant":{"enetId":627829,"name":"Egzon Binaku"},"updated":{"sec":1498154505,"usec":722000},"positionName":"LB","enetPos":38,"number":20},{"side":"away","type":"Starter","participant":{"enetId":528409,"name":"Kerim Mrabti"},"updated":{"sec":1498154505,"usec":735000},"positionName":"RM","enetPos":72,"number":17},{"side":"away","type":"Starter","participant":{"enetId":315058,"name":"Melker Hallberg"},"updated":{"sec":1498154505,"usec":743000},"positionName":"CM","enetPos":74,"number":16},{"side":"away","type":"Starter","participant":{"enetId":578187,"name":"Kristoffer Olsson"},"updated":{"sec":1498154505,"usec":754000},"positionName":"CM","enetPos":76,"number":8},{"side":"away","type":"Starter","participant":{"enetId":438780,"name":"Alexander Fransson"},"updated":{"sec":1498154505,"usec":763000},"positionName":"LM","enetPos":78,"number":7},{"side":"away","type":"Starter","updated":{"sec":1498028565,"usec":294000},"positionName":"CF","enetPos":104,"number":18,"_id":{"$id":"594a1a15dd2c63267a59777b"},"participant":{"enetId":436089,"name":"Pawel Cibicki"}},{"side":"away","type":"Starter","updated":{"sec":1498028565,"usec":298000},"positionName":"CF","enetPos":106,"number":10,"_id":{"$id":"594a1a15dd2c63267a59777c"},"participant":{"enetId":455620,"name":"Carlos Strandberg"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":776000},"number":1,"_id":{"$id":"594c0609dd2c63267a5984f0"},"participant":{"enetId":650650,"name":"Tim Erlandsson"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":782000},"number":23,"_id":{"$id":"594c0609dd2c63267a5984f1"},"participant":{"enetId":625168,"name":"Pontus Dahlberg"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":787000},"number":4,"_id":{"$id":"594c0609dd2c63267a5984f2"},"participant":{"enetId":309264,"name":"Joakim Nilsson"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":794000},"number":5,"_id":{"$id":"594c0609dd2c63267a5984f3"},"participant":{"enetId":484264,"name":"Adam Lundqvist"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":798000},"number":6,"_id":{"$id":"594c0609dd2c63267a5984f4"},"participant":{"enetId":293722,"name":"Simon Tibbling"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":801000},"number":9,"_id":{"$id":"594c0609dd2c63267a5984f5"},"participant":{"enetId":261597,"name":"Muamer Tankovic"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":806000},"number":11,"_id":{"$id":"594c0609dd2c63267a5984f6"},"participant":{"enetId":436079,"name":"Gustav Engvall"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":811000},"number":13,"_id":{"$id":"594c0609dd2c63267a5984f7"},"participant":{"enetId":561838,"name":"Isak Ssewankambo"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":815000},"number":14,"_id":{"$id":"594c0609dd2c63267a5984f8"},"participant":{"enetId":566157,"name":"Filip Dagerstaal"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":819000},"number":19,"_id":{"$id":"594c0609dd2c63267a5984f9"},"participant":{"enetId":438825,"name":"Niclas Eliasson"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":823000},"number":21,"_id":{"$id":"594c0609dd2c63267a5984fa"},"participant":{"enetId":748381,"name":"Joel Asoro"}},{"side":"away","type":"Substitute","updated":{"sec":1498154505,"usec":827000},"number":22,"_id":{"$id":"594c0609dd2c63267a5984fb"},"participant":{"enetId":384142,"name":"Amin Affane"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":702000},"number":12,"_id":{"$id":"594c0645dd2c63267a5984fc"},"participant":{"enetId":605643,"name":"Marek Rodak"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":709000},"number":23,"_id":{"$id":"594c0645dd2c63267a5984fd"},"participant":{"enetId":623747,"name":"Adam Jakubech"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":715000},"number":4,"_id":{"$id":"594c0645dd2c63267a5984fe"},"participant":{"enetId":521846,"name":"Martin Valjent"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":720000},"number":5,"_id":{"$id":"594c0645dd2c63267a5984ff"},"participant":{"enetId":406294,"name":"Tomas Huk"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":726000},"number":9,"_id":{"$id":"594c0645dd2c63267a598500"},"participant":{"enetId":488445,"name":"Tomas Vestenicky"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":731000},"number":11,"_id":{"$id":"594c0645dd2c63267a598501"},"participant":{"enetId":524665,"name":"Nikolas Spalek"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":736000},"number":16,"_id":{"$id":"594c0645dd2c63267a598502"},"participant":{"enetId":431530,"name":"Lukas Skovajsa"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":742000},"number":17,"_id":{"$id":"594c0645dd2c63267a598503"},"participant":{"enetId":518628,"name":"Lukas Haraslin"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":751000},"number":18,"_id":{"$id":"594c0645dd2c63267a598504"},"participant":{"enetId":728422,"name":"Pavol Safranko"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":756000},"number":19,"_id":{"$id":"594c0645dd2c63267a598505"},"participant":{"enetId":442602,"name":"Denis Vavro"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":762000},"number":20,"_id":{"$id":"594c0645dd2c63267a598506"},"participant":{"enetId":340815,"name":"Miroslav Kacer"}},{"side":"home","type":"Substitute","updated":{"sec":1498154565,"usec":768000},"number":22,"_id":{"$id":"594c0645dd2c63267a598507"},"participant":{"enetId":629112,"name":"Laszlo Benes"}}],"stats":[{"enetStandingDataId":92068189,"side":"home","type":"throwins","value":5},{"enetStandingDataId":92068190,"side":"home","type":"offsides","value":4},{"enetStandingDataId":92068193,"side":"home","type":"yellow-cards","value":0,"_id":{"$id":"594c11fea05196419a2bd3ed"}},{"enetStandingDataId":92068195,"side":"home","type":"blocked-shots","value":7},{"enetStandingDataId":92068197,"side":"home","type":"counter-attacks","value":0,"_id":{"$id":"594c11fea05196419a2bd3ef"}},{"enetStandingDataId":92068199,"side":"home","type":"red-cards","value":0,"_id":{"$id":"594c11fea05196419a2bd3f0"}},{"enetStandingDataId":92068201,"side":"home","type":"","value":4},{"enetStandingDataId":92068203,"side":"home","type":"","value":2},{"enetStandingDataId":92068204,"side":"home","type":"","value":3},{"enetStandingDataId":92068207,"side":"away","type":"offsides","value":5},{"enetStandingDataId":92068210,"side":"away","type":"yellow-cards","value":2},{"enetStandingDataId":92068211,"side":"away","type":"shots-off-target","value":4},{"enetStandingDataId":92068212,"side":"away","type":"blocked-shots","value":0,"_id":{"$id":"594c11fea05196419a2bd3f7"}},{"enetStandingDataId":92068213,"side":"away","type":"shots-on-target","value":4},{"enetStandingDataId":92068214,"side":"away","type":"counter-attacks","value":0,"_id":{"$id":"594c11fea05196419a2bd3f9"}},{"enetStandingDataId":92068215,"side":"away","type":"corners","value":5},{"enetStandingDataId":92068216,"side":"away","type":"red-cards","value":0,"_id":{"$id":"594c11fea05196419a2bd3fb"}},{"enetStandingDataId":92068217,"side":"away","type":"","value":0,"_id":{"$id":"594c11fea05196419a2bd3fc"}},{"enetStandingDataId":92068218,"side":"away","type":"","value":2},{"enetStandingDataId":92068219,"side":"away","type":"","value":8},{"enetStandingDataId":92068220,"side":"away","type":"","value":0,"_id":{"$id":"594c11fea05196419a2bd3ff"}},{"enetStandingDataId":92068221,"side":"away","type":"","value":3},{"enetStandingDataId":92068202,"side":"home","type":"","value":3},{"enetStandingDataId":92068206,"side":"away","type":"throwins","value":8},{"enetStandingDataId":92068208,"side":"away","type":"crosses","value":17},{"enetStandingDataId":92068188,"side":"home","type":"fouls","value":16},{"enetStandingDataId":92068194,"side":"home","type":"shots-off-target","value":5},{"enetStandingDataId":92068192,"side":"home","type":"possesion","value":55},{"enetStandingDataId":92068209,"side":"away","type":"possesion","value":45},{"enetStandingDataId":92068191,"side":"home","type":"crosses","value":18},{"enetStandingDataId":92068198,"side":"home","type":"corners","value":6},{"enetStandingDataId":92068196,"side":"home","type":"shots-on-target","value":4},{"enetStandingDataId":92068200,"side":"home","type":"","value":3},{"enetStandingDataId":92068205,"side":"away","type":"fouls","value":13}],"posts":{"review":{"id":92257,"status":"publish"}},"legendary":null,"predictor":null,"competitionId":45}
+			</script>
+			<div ng-if="maCtrl.match.lineup.length >= 22" formations lineup="maCtrl.match.lineup" incidents="maCtrl.match.incidents" motm-poll-formations></div>
+		</div>
+
+		<script type="text/javascript">
+			DataStore['manOfTheMatchPoll'] = {"votes":[{"votes":1,"value":"Branislav Ninaj","valueRef":432217},{"votes":2,"value":"Pavol Safranko","valueRef":728422},{"votes":2,"value":"Jaroslav Mihalik","valueRef":298946},{"votes":2,"value":"Stanislav Lobotka","valueRef":308517},{"votes":4,"value":"Lubomir Satka","valueRef":541825}],"totalVotes":11,"maxVotes":4,"pollRef":"motm-79935688"};
+		</script>
+
+		<motm-poll match-id="::79935688" ng-if="isShowLineup && maCtrl.match.statusType === 'finished'" ng-cloak></motm-poll>
+
+		<script type="text/ng-template" id="match-stats-template">
+			<div class="match-stats noise" ng-show="(stats | filter:withSupported).length > 0">
+				<ul>
+					<li ng-repeat="statName in stats | filter:withSupported" ng-class="statName">
+						<div class="clearfix">
+							<div class="stat-value home"><span>{{ homeValue(statName) + ((statName == 'possesion' && '%') || '') }}</span></div>
+							<div class="stat-name">{{ formatStatName(statName) }}</div>
+							<div class="stat-value away"><span>{{ awayValue(statName) + ((statName == 'possesion' && '%') || '') }}</span></div>
+						</div>
+						<div class="progress">
+							<div class="progress-bar" style="width:{{percentage(homeValue(statName), awayValue(statName))}}%"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</script>
+
+		<div match-stats='fouls, offsides, shots-on-target, shots-off-target, blocked-shots, counter-attacks, throw-ins, corners, crosses, possesion'></div>
+
+		<script type="text/ng-template" id="gauge-template">
+			<ul>
+				<li ng-repeat="item in data" ng-style="{height: item[2] + '%', 'font-size': ((item[2] < 1)? '25%' : item[2] + 25 + '%') }" ng-click="onItemClick(gaugeId, item, $index, $event)"
+					ng-mouseover="onItemHover(gaugeId, item, $index, $event)">
+					<span ng-bind="item[0]"></span>
+				</li>
+			</ul>
+		</script>
+
+		<script type="text/javascript">
+			DataStore.homeTeamPerformancePoll = {"votes":[{"votes":6,"value":"Top Class"},{"value":"Great","votes":0},{"votes":1,"value":"Average"},{"votes":2,"value":"Lucky"},{"value":"Poor","votes":0}],"totalVotes":9,"maxVotes":6,"pollRef":"teamperf-79935688-773"};
+			DataStore.awayTeamPerformancePoll = {"votes":[{"value":"Top Class","votes":0},{"value":"Great","votes":0},{"votes":5,"value":"Average"},{"value":"Lucky","votes":0},{"votes":3,"value":"Poor"}],"totalVotes":8,"maxVotes":5,"pollRef":"teamperf-79935688-783"};
+		</script>
+
+		<div class="ratings" ng-if="maCtrl.match.statusType === 'finished'" ng-cloak>
+			<div class="gauge home" gauge data="maCtrl.gauges.teamPerformance.home" on-item-click="maCtrl.voteTeamPerformance"
+				on-item-hover="maCtrl.hoverTeamPerformance" id="{{ maCtrl.homeTeamPerformancePoll.pollRef }}">
+			</div>
+			<div class="middle-part">
+				<div class="count">{{ maCtrl.homeTeamPerformancePoll.totalVotes + maCtrl.awayTeamPerformancePoll.totalVotes }} Votes</div>
+				<div class="desc">
+					Slovakia U21 vs Sweden U21<br/>Team Performance
+				</div>
+			</div>
+			<div class="gauge away" gauge data="maCtrl.gauges.teamPerformance.away" on-item-click="maCtrl.voteTeamPerformance"
+				on-item-hover="maCtrl.hoverTeamPerformance" id="{{ maCtrl.awayTeamPerformancePoll.pollRef }}">
+			</div>
+		</div>
+
+		<!--
+		~ Copyright (C) 2014 Media.net Advertising FZ-LLC All Rights Reserved
+		-->
+		<div id="716422770" style="margin-top: 20px;">
+			<script type="text/javascript">
+				try {
+					window._mNHandle.queue.push(function () {
+						window._mNDetails.loadTag("716422770", "1000x250", "716422770");
+					});
+				}
+				catch (error) {}
+			</script>
+		</div>
+
+		<div id="mp_main_content">
+			<div id="mp_tabs">
+				<div id="mp_video_tab" class="mp_tab">
+					<div class="leftColumn">
+						<div class="_temp-spacer_"></div>
+						
+						
+												
+						<!--Carambola Script --> 
+						<img height='0' width='0' alt='' src='//pixel.watch/o7z9' style='display:block;' /> 
+						<script data-cfasync="false" class="carambola_InContent" type="text/javascript" cbola_wid="0">  
+						(function (i,d,s,o,m,r,c,l,w,q,y,h,g) {  
+						var e=d.getElementById(r);if(e===null){  
+						var t = d.createElement(o); t.src = g; t.id = r; t.setAttribute(m, s);t.async = 1;var n=d.getElementsByTagName(o)[0];n.parentNode.insertBefore(t, n); 
+						var dt=new Date().getTime();  
+						try{i[l][w+y](h,i[l][q+y](h)+'&'+dt);}catch(er){i[h]=dt;}  
+						} else if(typeof i[c]!=='undefined'){i[c]++}  
+						else{i[c]=1;}  
+						})(window, document, 'InContent', 'script', 'mediaType', 'carambola_proxy','Cbola_IC','localStorage','set','get','Item','cbolaDt','//route.carambo.la/inimage/getlayer?pid=pmdn33&did=112265&wid=0')  
+						</script>
+
+						<div id="comments">
+    <header class="comments-header clearfix">
+        <div class="comments-count">0 Comments</div>
+    </header>
+    
+    <div class="comment-list">
+                
+        <div class="all-comments">
+            
+        	        </div>
+
+        
+        <script type="text/json" id="comments-json-data">{"discussionId":"match:79935688","filter":null,"cursor":{"since":0,"next":null}}</script>
+    </div>
+
+    <div class="load-more-comments">Load More</div>
+</div>
+						<div id="commenter">
+			<div class="header">. . . Speak Your Mind . . .</div>
+		
+			<div class="info-box mb20">
+			Please <a href="http://footyroom.com/login">log in</a> or <a href="http://footyroom.com/signup">sign up</a> to comment.
+		</div>
+	
+	<form method="post" class="commenter-form">
+		<input type="hidden" name="post_id" value="79935688" id="post_id" />
+		<input type="hidden" name="comment_id" value="0" />
+		<input type="hidden" name="parent" value="0" />
+
+		<div class="box">
+			<textarea class="comment-input" name="comment" tabindex="1" disabled="disabled"></textarea>
+
+			<div class="comment-remaining-count"></div>
+			
+			<div class="images">
+				<div class="images-list clearfix">
+					<div class="add-image"><span class="icn-add"></span></div>
+				</div>
+			</div>
+			
+			<div class="commenter-errors displayno"></div>
+			
+			<div class="control clearfix">
+				<ul class="left-menu clearfix">
+									</ul>
+				<ul class="right-menu">
+					<li class="submit">SAY IT</li>
+				</ul>
+				<div class="status"></div>
+			</div>
+		</div>
+	 </form>
+</div>
+
+<script>
+	$("#commenter").commenter({"hasHeader":true,"action":"\/matches\/comment","allowImages":false,"charsLimit":800,"postId":79935688});
+</script>
+					</div>
+
+					<div class="rightColumn clearfix">
+						<div class="rightImgAd" style="margin: 20px 0 20px 40px;">
+							<div class="rightImgAd-wrap" style="border:none; background:none;">
+								<!-- FR_RightSide_of_Vid -->
+								<div id='div-gpt-ad-1341915070098-0'>
+								<script type='text/javascript'>
+								googletag.cmd.push(function() { googletag.display('div-gpt-ad-1341915070098-0'); });
+								</script>
+								</div>
+							</div>
+						</div>
+
+						<div id="related">
+							<div class="related_channel">
+								Channel: <span class="channel"><a href="http://footyroom.com/competitions/45/euro-u21-grp-a">EURO U21 Grp. A</a></span>
+							</div>
+							<div class="related_body">
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935702/spain-u21-vs-italy-u21/review"><img src="http://images.footyroom.com/thumbs/79af2273a5e3ecc067bf471e69c88e93/spain-u21-italy-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935702/spain-u21-vs-italy-u21/review">Spain U21 3 - 1 Italy U21</a>
+											</span>
+											<span class="related_time">
+												3 days ago
+											</span>
+										</div>
+									</div>
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935701/england-u21-vs-germany-u21/review"><img src="http://images.footyroom.com/thumbs/82ed34fb3f44a22f8347c1e4324ee1a6/england-u21-germany-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935701/england-u21-vs-germany-u21/review">England U21 2 - 2 Germany U21 [PEN: 3-4]</a>
+											</span>
+											<span class="related_time">
+												3 days ago
+											</span>
+										</div>
+									</div>
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935699/italy-u21-vs-germany-u21/review"><img src="http://images.footyroom.com/thumbs/798d2b09abb002d4a5c011bebdc28f05/italy-u21-germany-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935699/italy-u21-vs-germany-u21/review">Italy U21 1 - 0 Germany U21</a>
+											</span>
+											<span class="related_time">
+												6 days ago
+											</span>
+										</div>
+									</div>
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935700/czech-republic-u21-vs-denmark-u21/review"><img src="http://images.footyroom.com/thumbs/9e270fb88144bcdd2d90c22329cf2171/czech-republic-u21-denmark-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935700/czech-republic-u21-vs-denmark-u21/review">Czech Republic U21 2 - 4 Denmark U21</a>
+											</span>
+											<span class="related_time">
+												6 days ago
+											</span>
+										</div>
+									</div>
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935693/macedonia-u21-vs-portugal-u21/review"><img src="http://images.footyroom.com/thumbs/a27182a5c6b48a9c06d8d8a60136d378/macedonia-u21-portugal-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935693/macedonia-u21-vs-portugal-u21/review">Macedonia U21 2 - 4 Portugal U21</a>
+											</span>
+											<span class="related_time">
+												7 days ago
+											</span>
+										</div>
+									</div>
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935694/serbia-u21-vs-spain-u21/review"><img src="http://images.footyroom.com/thumbs/f58d0269cf100427f2815b64b45604f0/serbia-u21-spain-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935694/serbia-u21-vs-spain-u21/review">Serbia U21 0 - 1 Spain U21</a>
+											</span>
+											<span class="related_time">
+												7 days ago
+											</span>
+										</div>
+									</div>
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935687/england-u21-vs-poland-u21/review"><img src="http://images.footyroom.com/thumbs/4e828be6e527b41448203372c655d36b/england-u21-poland-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935687/england-u21-vs-poland-u21/review">England U21 3 - 0 Poland U21</a>
+											</span>
+											<span class="related_time">
+												8 days ago
+											</span>
+										</div>
+									</div>
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935698/czech-republic-u21-vs-italy-u21/review"><img src="http://images.footyroom.com/thumbs/d24162ff9fd67f8d6946489051a286c1/czech-republic-u21-italy-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935698/czech-republic-u21-vs-italy-u21/review">Czech Republic U21 3 - 1 Italy U21</a>
+											</span>
+											<span class="related_time">
+												9 days ago
+											</span>
+										</div>
+									</div>
+																	<div class="related_post clearfix">
+										<div class="related_thumb">
+											<a href="http://footyroom.com/matches/79935697/germany-u21-vs-denmark-u21/review"><img src="http://images.footyroom.com/thumbs/4c9cf4aa0dc923e77da048cbd075dfdf/germany-u21-denmark-u21" /></a>
+										</div>
+										<div class="related_info">
+											<span class="related_link">
+												<a href="http://footyroom.com/matches/79935697/germany-u21-vs-denmark-u21/review">Germany U21 3 - 0 Denmark U21</a>
+											</span>
+											<span class="related_time">
+												9 days ago
+											</span>
+										</div>
+									</div>
+															</div>
+						</div>
+
+						<div style="margin: 20px 0 20px 20px;">
+							<!-- div-gpt-ad-300x250-Sidebar1 -->
+							<div align="center" id="div-gpt-ad-300x250-Sidebar1">
+							    <script data-cfasync="false" type='text/javascript'>
+							        freestar.queue.push(function () { googletag.display('div-gpt-ad-300x250-Sidebar1'); });
+							    </script>
+							</div>
+						</div>
+
+						<div style="margin-left: 18px">
+							<div class="fb-page" data-href="https://www.facebook.com/FootyRoom" data-width="340" data-height="427" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"></div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+                            <div id="footer-content" class="clearfix">
+                    <div id="footer-logo"></div>
+                    
+                    <div class="footer-section" style="padding-top: 10px; margin-left:0px; width: 100px;">
+                        <div><a href="http://footyroom.com/DMCA">DMCA</a></div>
+                        <div><a href="/privacy-policy.html">Privacy Policy</a></div>
+                    </div>
+                    
+                    <div class="footer-section" style="width: 70px;">
+                        <span class="header">Contact</span>
+                        <a href="http://footyroom.com/feedback">Feedback</a>
+                        <a href="http://footyroom.com/advertise">Advertise</a>
+                    </div>
+                    
+                    <div class="footer-section" style="width: 100px;">
+                        Get our Free<br>iPhone and<br>Android apps
+                    </div>
+                    
+                    <div class="footer-section" style="border-left:none; margin-left: 0;">
+                        <a class="app-store" href="https://itunes.apple.com/us/app/footyroom-app/id807484450?mt=8" target="_blank">
+                            <img src="/pics/newsletter/apple-store.png">
+                        </a>
+                        <a class="app-store" href="https://play.google.com/store/apps/details?id=com.footyroom.highlights" target="_blank">
+                            <img src="/pics/newsletter/google-store.png">
+                        </a>
+                    </div>
+                    
+                    <div class="footer-section" style="">
+                        <span>Make sure to follow us on<br>social networks to stay up<br>to date with any changes</span>
+                    </div>
+
+                    <div class="footer-section" style="border-left:none;">
+                        <a href="https://www.facebook.com/FootyRoom" target="_blank" class="social-icon facebook"></a>
+                        <a href="https://twitter.com/footyroom" target="_blank" class="social-icon twitter"></a>
+                        <a href="http://instagram.com/footyroomcom" target="_blank" class="social-icon instagram"></a>
+                        <a href="https://vk.com/footyroomfans" target="_blank" class="social-icon vk"></a>
+                    </div>
+                </div>
+            
+                <div class="copyleft">© FootyRoom 2009 - 2017</div>
+            
+        </div>
+
+        <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+        try {
+        var pageTracker = _gat._getTracker("UA-4779751-2");
+        pageTracker._trackPageview();
+        } catch(err) {}</script>
+
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+        <script>
+            var HW_config = {
+                selector: ".header-logo",
+                account: "7QjZLJ"
+            };
+        </script>
+        <script async src="//cdn.headwayapp.co/widget.js"></script>
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"81ee9c0b70","applicationID":"21116691","transactionName":"YFNTbRMHXBcFBkVYDlkZckwSEl0JSwhQRQJfZFRPCANF","queueTime":0,"applicationTime":44,"atts":"TBRQG1sdTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
